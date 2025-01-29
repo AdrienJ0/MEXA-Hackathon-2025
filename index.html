@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SereneNexus</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -24,10 +24,12 @@
             </button>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
+                <li><a href="app_sections/patient-dashboard.html">Patient Dashboard</a></li>
                 <li><a href="app_sections/community.html">Community</a></li>
                 <li><a href="app_sections/e-learning.html">E-learning</a></li>
                 <li><a href="app_sections/about.html">About</a></li>
                 <li><a href="app_sections/login.html">Login/Signup</a></li>
+                <li><a href="app_sections/clinician-dashboard.html">Clinician Dashboard</a></li>
             </ul>
         </nav>
     </header>
@@ -42,23 +44,31 @@
         </section>
 
         <section class="features">
-            <h2>Key Features</h2>
+            <h2>AI Key Features</h2>
 
             <div class="feature-grid">
-                <div class="feature" id="face-rec-feature">
-                    <!--<img src="placeholder-icon.png" alt="Face Recognition Icon">-->
-                    <i class="fas fa-user-check fa-3x"></i> <!- Face Analysis Icon -->
+                <!-- <div class="feature" id="face-rec-feature">
+                    <img src="placeholder-icon.png" alt="Face Recognition Icon">-
+                    <i class="fas fa-user-check fa-3x"></i> 
                     <h3>Face Analysis</h3>
                     <p>Analyze facial expressions for emotional insights.</p>
                     <button id="face-rec-button">Analyze Face</button>
                     <div id="face-rec-results"></div>
-                </div>
+                </div> -->
 
                 <div class="feature" id="chatbot-feature">
                     <!--<img src="placeholder-icon.png" alt="Chatbot Icon">-->
                     <i class="fas fa-comment-dots fa-3x"></i> <!- Chatbot Icon -->
                     <h3>Chatbot Support</h3>
-                    <p>Get instant support and information.</p>
+                    <p>Get instant support and information.</p> 
+                    <div>
+                        <p style="color: red"><b>If you are experiencing an emergency or having suicidal thoughts, you must: </b></p>
+                        <button id="call-911-button"><b>Call 911</b></button>
+                        <button id="send-emergency-message"><b>Message Crisis Text Line </b></button>
+
+                        <br><br>
+                    </div>
+                    
                     <div id="chat-area"></div>
                     <div class="input-area">
                         <textarea id="message-input" placeholder="Type your message..."></textarea>
@@ -71,13 +81,13 @@
                     <i class="fas fa-user-check fa-3x"></i> <!- Face Analysis Icon -->
                     <h3>Chatbot Live Conversation</h3>
                     <p>Come and discuss with our Real-time Audio & Video Chatbot</p>
-                    <button id="video-chatbot-button"><a href="Chatbots/video_chatbot/video_chatbot.html">Discuss with the Video Chatbot</a></button>
+                    <button id="video-chatbot-button"><a href="LLMs/video_chatbot/video_chatbot.html">Discuss with the Video Chatbot</a></button>
                     <div id="face-rec-results"></div>
                 </div>
 
-                <div class="feature" id="translation-feature">
-                  <!--<img src="placeholder-icon.png" alt="Translation Icon">-->
-                  <i class="fas fa-language fa-3x"></i> <!- Translation Icon -->
+                <!-- <div class="feature" id="translation-feature">
+                  <img src="placeholder-icon.png" alt="Translation Icon">
+                  <i class="fas fa-language fa-3x"></i> 
                   <h3>Language Translation</h3>
                   <p>Communicate in multiple languages.</p>
                   <select id="target-language">
@@ -86,7 +96,7 @@
                     <option value="es">Spanish</option>
                     <option value="de">German</option>
                   </select>
-                </div>
+                </div> -->
 
                 
             </div>

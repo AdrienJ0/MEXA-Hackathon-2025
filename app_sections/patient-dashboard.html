@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard</title>
+    <link rel="stylesheet" href="patient-dashboard.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">SereneNexus</div>
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="login.html">Login/Signup</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="welcome">
+            <h1>Welcome to Your Dashboard</h1>
+            <p>We're here to support you on your journey to mental well-being.</p>
+            <img src="../media/peaceful-image.jpg" alt="Peaceful and Happy Image">
+        </section>
+
+        <section class="dashboard-row">
+            <div class="next-appointment">
+                <h2>Next Appointment</h2>
+                <p><strong>Clinician:</strong> Dr. John Doe</p>
+                <p><strong>Date:</strong> 2025-02-10</p>
+                <p><strong>Time:</strong> 10:00 AM</p>
+            </div>
+
+            <div class="private-chat">
+                <h2>Chat with Your Clinician</h2>
+                <form action="#">
+                    <textarea placeholder="Write a message..." rows="4"></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="dashboard-row">
+            <div class="prescriptions">
+                <h2>Prescriptions</h2>
+                <ul class="prescription-list">
+                    <li>
+                        <label for="med1">
+                            <input type="checkbox" id="med1">
+                            Anxiety Medication (Complete)
+                        </label>
+                    </li>
+                    <li>
+                        <label for="med2">
+                            <input type="checkbox" id="med2">
+                            Depression Medication (Incomplete)
+                        </label>
+                    </li>
+                    <li>
+                        <label for="med3">
+                            <input type="checkbox" id="med3">
+                            Sleep Aid Medication (Incomplete)
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="disease-news">
+                <h2>Latest News on Your Condition</h2>
+                <ul>
+                    <li><a href="#">New study shows promising results for anxiety treatment</a></li>
+                    <li><a href="#">Understanding the effects of depression on the brain</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="schedule">
+            <h2>Schedule Your Next Appointment</h2>
+            <form action="#">
+                <label for="appointment-date">Select Date and Time:</label>
+                <input type="datetime-local" id="appointment-date" name="appointment-date">
+                <button type="submit">Schedule Appointment</button>
+            </form>
+        </section>
+
+        <section class="widgets">
+            <div class="widget mood-tracker">
+                <h3>Mood Tracker</h3>
+                <label for="mood-range">How are you feeling today?</label>
+                <input type="range" id="mood-range" name="mood" min="1" max="5">
+            </div>
+
+            <div class="widget daily-affirmations">
+                <h3>Daily Affirmations</h3>
+                <p>"You are enough, just as you are."</p>
+            </div>
+
+            <div class="widget mental-health-tips">
+                <h3>Mental Health Tips</h3>
+                <p>Take 10 minutes each day for mindfulness exercises.</p>
+            </div>
+
+            <div class="widget medication-reminder">
+                <h3>Medication Reminder</h3>
+                <p>Don't forget to take your Anxiety Medication at 8:00 AM.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 SereneNexus. All rights reserved.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

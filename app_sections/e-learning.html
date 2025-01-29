@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resources - SereneNexus</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="e-learning.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -27,20 +27,104 @@
             </ul>
         </nav>
     </header>
+
     <main>
         <section class="page-content">
             <h1>Resources</h1>
-            <p>Here you'll find helpful resources related to mental well-being. This could include articles, links to external organizations, self-help guides, and more.</p>
-            <ul>
-                <li><a href="#">Link to a helpful article</a></li>
-                <li><a href="#">Link to a mental health organization</a></li>
-                <li><a href="#">Self-help guide download (PDF)</a></li>
-                </ul>
+            <p>Explore articles, self-help guides, videos, podcasts, and organizations to support your mental well-being.</p>
+            
+            <!-- Search and Filter -->
+            <div class="search-filter">
+                <input type="text" placeholder="Search resources..." class="search-input">
+                <select class="filter-dropdown">
+                    <option value="all">All Categories</option>
+                    <option value="articles">Articles</option>
+                    <option value="guides">Guides</option>
+                    <option value="videos">Videos</option>
+                    <option value="podcasts">Podcasts</option>
+                    <option value="organizations">Organizations</option>
+                </select>
+            </div>
+
+            <!-- Resource Categories -->
+            <div class="resource-grid">
+                <div class="resource-card">
+                    <h2>Articles</h2>
+                    <ul>
+                        <li><a href="#">5 Steps to Better Mental Health</a></li>
+                        <li><a href="#">Understanding Anxiety and How to Manage It</a></li>
+                    </ul>
+                </div>
+
+                <div class="resource-card">
+                    <h2>Self-Help Guides</h2>
+                    <ul>
+                        <li><a href="#">Mindfulness & Meditation (PDF)</a></li>
+                        <li><a href="#">Stress Management Guide (PDF)</a></li>
+                    </ul>
+                </div>
+
+                <div class="resource-card">
+                    <h2>Videos</h2>
+                    <ul>
+                        <li><a href="#">Guided Meditation for Stress Relief</a></li>
+                        <li><a href="#">How to Improve Your Sleep Routine</a></li>
+                    </ul>
+                </div>
+
+                <div class="resource-card">
+                    <h2>Organizations</h2>
+                    <ul>
+                        <li><a href="#">National Mental Health Hotline</a></li>
+                        <li><a href="#">Crisis Text Line</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Podcast Section -->
+            <section class="podcast-section">
+                <h2>🎙️ Mental Health Podcasts</h2>
+                <p>Listen to inspiring discussions on mental well-being, mindfulness, and self-care.</p>
+
+                <div class="podcast-grid">
+                    <div class="podcast-card">
+                        <img src="../images/podcast1.jpg" alt="Podcast Cover">
+                        <h3>The Mindful Minute</h3>
+                        <p>Quick, daily mindfulness exercises to keep you grounded.</p>
+                        <audio controls>
+                            <source src="../audio/mindful-minute.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+
+                    <div class="podcast-card">
+                        <img src="../images/podcast2.jpg" alt="Podcast Cover">
+                        <h3>Self-Care Sessions</h3>
+                        <p>Learn practical self-care strategies from experts.</p>
+                        <audio controls>
+                            <source src="../audio/self-care-sessions.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+
+                    <div class="podcast-card">
+                        <img src="../images/podcast3.jpg" alt="Podcast Cover">
+                        <h3>Overcoming Anxiety</h3>
+                        <p>Tips and real stories to help manage anxiety.</p>
+                        <audio controls>
+                            <source src="../audio/overcoming-anxiety.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+            </section>
         </section>
     </main>
+
     <footer>
         <p>&copy; 2025 SereneNexus</p>
     </footer>
-    <script src="script.js"></script>
+
+    <script src="../script.js"></script>
 </body>
 </html>

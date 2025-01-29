@@ -1,34 +1,134 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Community</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Dashboard</title>
+    <link rel="stylesheet" href="community.css">
 </head>
 <body>
-  <header>
+
+    <!-- Header Section -->
+    <header>
         <nav>
-            <div class="logo">SereneNexus</div>
-            <button class="menu-toggle" aria-label="Toggle navigation">
+            <div class="logo">Community Hub</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#friends">Your Friends</a></li>
+                <li><a href="#discussions">Recent Discussions</a></li>
+                <li><a href="#events">Event Calendar</a></li>
+                <li><a href="#groups">Groups</a></li>
+            </ul>
+            <button class="menu-toggle">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </button>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="community.html">Community</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="login.html">Login/Signup</a></li>
-            </ul>
         </nav>
     </header>
+
+    <!-- Main Content -->
     <main>
-        <h1>Community Page</h1>
-        <p>This is the community page content.</p>
+        <!-- Your Friends Section -->
+        <section id="friends" class="your-friends">
+            <h2>Your Friends</h2>
+            <div class="friend-card">
+                <img src="../media/avatar-boy-1.jpg" alt="Friend 1">
+                <h3>John Doe</h3>
+                <p>Health Enthusiast & Mental Health Advocate</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="friend-card">
+                <img src="../media/avatar-boy-2.jpg" alt="Friend 2">
+                <h3>Jane Smith</h3>
+                <p>Fitness Buff & Yoga Lover</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="friend-card">
+                <img src="../media/avatar-boy-1.jpg" alt="Friend 3">
+                <h3>Mark Johnson</h3>
+                <p>Nutritionist & Wellness Coach</p>
+                <a href="#">View Profile</a>
+            </div>
+        </section>
+
+        <!-- Join a Group Section -->
+        <section id="groups" class="groups">
+            <h2>Join a Group</h2>
+            <div class="group-card">
+                <h3>Mindful Eating</h3>
+                <p>A group for sharing tips and recipes for healthy eating habits.</p>
+                <a href="#">Join Group</a>
+            </div>
+            <div class="group-card">
+                <h3>Yoga & Meditation</h3>
+                <p>A space for yoga lovers to connect and practice together.</p>
+                <a href="#">Join Group</a>
+            </div>
+            <div class="group-card">
+                <h3>Support for Mental Health</h3>
+                <p>A safe place for discussing mental health challenges and coping strategies.</p>
+                <a href="#">Join Group</a>
+            </div>
+        </section>
+
+        <!-- Recent Discussions Section -->
+        <section id="discussions" class="recent-discussions">
+            <h2>Recent Discussions</h2>
+            <div class="discussion-item">
+                <h3>How to Improve Mental Health</h3>
+                <p>What are some practical tips for maintaining good mental health...</p>
+                <a href="#">Join Discussion</a>
+            </div>
+            <div class="discussion-item">
+                <h3>Best Nutritional Practices for a Healthy Life</h3>
+                <p>Share your tips for eating right and staying healthy...</p>
+                <a href="#">Join Discussion</a>
+            </div>
+            <div class="discussion-item">
+                <h3>Home Workouts You Can Do Daily</h3>
+                <p>Let's discuss quick exercises you can do without equipment...</p>
+                <a href="#">Join Discussion</a>
+            </div>
+        </section>
+
+        <!-- Event Calendar Section -->
+        <section id="events" class="event-calendar">
+            <h2>Upcoming Events</h2>
+            <ul>
+                <li>
+                    <strong>Yoga for Beginners</strong><br>
+                    <span>February 10, 2025</span>
+                    <a href="#">Learn More</a>
+                </li>
+                <li>
+                    <strong>Nutrition Webinar: Healthy Eating Habits</strong><br>
+                    <span>February 15, 2025</span>
+                    <a href="#">Learn More</a>
+                </li>
+                <li>
+                    <strong>Mental Health Awareness: Discussion Panel</strong><br>
+                    <span>February 20, 2025</span>
+                    <a href="#">Learn More</a>
+                </li>
+            </ul>
+        </section>
     </main>
+
+    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2025 SereneNexus</p>
+        <p>&copy; 2025 Community Hub. All rights reserved.</p>
     </footer>
-    <script src="script.js"></script>
+
+    <script>
+        // Mobile Navigation Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+
 </body>
 </html>
