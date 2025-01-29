@@ -189,6 +189,33 @@ footer {
     padding: 10px;
     margin-bottom: 10px;
     text-align: left;
+
+
+    div.model {
+
+        /* p {
+            background-color: rgb(87, 82, 82);
+        } */
+
+        
+    }
+
+    div.user {
+        display: flex;
+        justify-content: flex-end;
+
+        /* p {
+            background-color: blue;
+        } */
+    }
+
+    div.error {
+        p {
+            font-size: 14px;
+            text-align: center;
+            color: red;
+        }
+    }
 }
 
 .input-area {

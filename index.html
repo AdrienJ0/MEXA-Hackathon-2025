@@ -25,7 +25,7 @@
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="community.html">Community</a></li>
-                <li><a href="resources.html">Resources</a></li>
+                <li><a href="e-learning.html">E-learning</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="login.html">Login/Signup</a></li>
             </ul>
@@ -66,6 +66,15 @@
                     </div>
                 </div>
 
+                <div class="feature" id="face-rec-feature">
+                    <!--<img src="placeholder-icon.png" alt="Face Recognition Icon">-->
+                    <i class="fas fa-user-check fa-3x"></i> <!- Face Analysis Icon -->
+                    <h3>Chatbot Live Conversation</h3>
+                    <p>Come and discuss with our Real-time Audio & Video Chatbot</p>
+                    <button id="video-chatbot-button"><a href="Chatbots/video_chatbot/video_chatbot.html">Discuss with the Video Chatbot</a></button>
+                    <div id="face-rec-results"></div>
+                </div>
+
                 <div class="feature" id="translation-feature">
                   <!--<img src="placeholder-icon.png" alt="Translation Icon">-->
                   <i class="fas fa-language fa-3x"></i> <!- Translation Icon -->
@@ -78,6 +87,8 @@
                     <option value="de">German</option>
                   </select>
                 </div>
+
+                
             </div>
         </section>
 
@@ -93,6 +104,15 @@
     <footer>
         <p>&copy; 2025 Serotonin_sync</p>
     </footer>
-    <script src="script.js"></script>
+
+    <script type="importmap">
+        {
+          "imports": {
+            "@google/generative-ai": "https://esm.run/@google/generative-ai"
+          }
+        }
+    </script>
+
+    <script type="module" src="script.js"></script>
 </body>
 </html>
