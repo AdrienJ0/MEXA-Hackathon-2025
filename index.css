@@ -40,35 +40,12 @@ body {
 
 /* Heading Styles */
 h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: var(--primary-color);
     margin-bottom: 2rem;
     font-weight: 700;
     text-align: center;
     line-height: 1.2;
-}
-
-/* Form Input Fields */
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-    width: 100%;
-    padding: 1rem;
-    margin-bottom: 1.2rem;
-    border-radius: var(--border-radius);
-    border: 1px solid #ddd;
-    font-size: 1rem;
-    background-color: #f7f7f7;
-    transition: border 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Focus state for inputs */
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="password"]:focus {
-    border: 1px solid var(--primary-color);
-    box-shadow: 0 0 10px rgba(74, 144, 226, 0.3);
-    outline: none;
 }
 
 /* Button Styles */
@@ -97,21 +74,18 @@ button a {
     color: white;
 }
 
-/* Additional Text Styling */
-p {
-    font-size: 1rem;
-    color: var(--text-color);
+/* Button for "A Clinician" */
+#btn-clinician {
+    background-color: var(--accent-color);
 }
 
-/* Link Styling */
-a {
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: 600;
+#btn-clinician:hover {
+    background-color: #F29C11; /* Slightly darker shade for contrast */
 }
 
-a:hover {
-    text-decoration: underline;
+/* Add some spacing to the page to give a relaxed, welcoming feel */
+.container > * {
+    margin-bottom: 1.5rem;
 }
 
 /* Make sure the body stretches to full height and aligns the content in the center */
@@ -124,21 +98,14 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-/* Responsive Design */
+/* Responsive design for smaller screens */
 @media (max-width: 768px) {
     .container {
         padding: 2rem;
     }
 
     h1 {
-        font-size: 2rem;
-    }
-
-    input[type="text"],
-    input[type="email"],
-    input[type="password"] {
-        font-size: 1rem;
-        padding: 0.8rem;
+        font-size: 2.5rem;
     }
 
     button {
