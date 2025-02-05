@@ -4,185 +4,202 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clinician Dashboard - SereneNexus</title>
-    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="new-clinician-dashboard.css">
 </head>
 <body>
-  <header>
-    <nav>
-        <div class="logo">SereneNexus</div>
-        <button class="menu-toggle" aria-label="Toggle navigation">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
-        <ul class="nav-links">
-            <li><a href="clinician-dashboard.html">Clinician Dashboard</a></li>
-            <li><a href="../../clinician_login.html">Login/Signup</a></li>
-        </ul>
-    </nav>
-  </header>
+    <header>
+        <nav>
+            <div class="logo">SereneNexus</div>
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="clinician-dashboard.html">Clinician Dashboard</a></li>
+                <li><a href="../../clinician_login.html">Login/Signup</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <main>
-    <h1>Welcome, Dr. [Clinician Name]</h1>
-    <p>Your dashboard for managing your patients, consultations, prescriptions, and treatment objectives.</p>
+    <main>
+        <h1>Welcome, Dr. [Clinician Name]</h1>
+        <p>Your dashboard for managing your patients, consultations, prescriptions, and treatment objectives.</p>
 
-    <!-- Patient List Section -->
-    <section class="patient-list">
-        <h2>Your Patients</h2>
-        <ul id="patient-list">
-            <!-- Patient entries will be dynamically generated here -->
-        </ul>
-    </section>
+        <!-- Patient List Section -->
+        <section class="patient-list">
+            <h2>Your Patients</h2>
+            <table class="patient-table" id="patient-list">
+                <thead>
+                    <tr>
+                        <th>Patient Name</th>
+                        <th>Medical History</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Patient rows will be dynamically generated here -->
+                </tbody>
+            </table>
+        </section>
 
-    <!-- Consultation Scheduling -->
-    <section class="schedule-consultation">
-        <h2>Schedule a Consultation</h2>
-        <form id="consultation-form">
-            <label for="patient-select">Select Patient:</label>
-            <select id="patient-select">
-                <!-- Patient names will populate here -->
-            </select>
-            <br><br>
-            <label for="consultation-date">Select Date & Time:</label>
-            <input type="datetime-local" id="consultation-date" required>
-            <br><br>
-            <button type="submit">Schedule Consultation</button>
-        </form>
-    </section>
+        <!-- Consultation Scheduling Section -->
+        <section class="schedule-consultation">
+            <h2>Schedule a Consultation</h2>
+            <form id="consultation-form">
+                <label for="patient-select">Select Patient:</label>
+                <select id="patient-select">
+                    <!-- Patient names will populate here -->
+                </select>
+                <br><br>
+                <label for="consultation-date">Select Date & Time:</label>
+                <input type="datetime-local" id="consultation-date" required>
+                <br><br>
+                <button type="submit">Schedule Consultation</button>
+            </form>
+        </section>
 
-    <!-- Private Chat Section -->
-    <section class="private-chat">
-        <h2>Private Chat with Patient</h2>
-        <form id="chat-form">
-            <label for="chat-select">Select Patient:</label>
-            <select id="chat-select">
-                <!-- Patient names will populate here -->
-            </select>
-            <br><br>
-            <textarea id="chat-message" placeholder="Type your message..." rows="4"></textarea>
-            <br><br>
-            <button type="submit">Send Message</button>
-        </form>
-        <div id="chat-history">
-            <!-- Chat history for the selected patient -->
-        </div>
-    </section>
+        <!-- Private Chat Section -->
+        <section class="private-chat">
+            <h2>Private Chat with Patient</h2>
+            <form id="chat-form">
+                <label for="chat-select">Select Patient:</label>
+                <select id="chat-select">
+                    <!-- Patient names will populate here -->
+                </select>
+                <br><br>
+                <textarea id="chat-message" placeholder="Type your message..." rows="4"></textarea>
+                <br><br>
+                <button type="submit">Send Message</button>
+            </form>
+            <div id="chat-history">
+                <!-- Chat history for the selected patient -->
+            </div>
+        </section>
 
-    <!-- Treatment Objectives -->
-    <section class="treatment-objectives">
-        <h2>Treatment Objectives</h2>
-        <form id="objectives-form">
-            <label for="patient-objective-select">Select Patient:</label>
-            <select id="patient-objective-select">
-                <!-- Patient names will populate here -->
-            </select>
-            <br><br>
-            <label for="objective-input">Set Treatment Objective:</label>
-            <textarea id="objective-input" placeholder="Objective details..." rows="4"></textarea>
-            <br><br>
-            <button type="submit">Set Objective</button>
-        </form>
-    </section>
+        <!-- Treatment Objectives Section -->
+        <section class="treatment-objectives">
+            <h2>Treatment Objectives</h2>
+            <form id="objectives-form">
+                <label for="patient-objective-select">Select Patient:</label>
+                <select id="patient-objective-select">
+                    <!-- Patient names will populate here -->
+                </select>
+                <br><br>
+                <label for="objective-input">Set Treatment Objective:</label>
+                <textarea id="objective-input" placeholder="Objective details..." rows="4"></textarea>
+                <br><br>
+                <button type="submit">Set Objective</button>
+            </form>
+        </section>
 
-    <!-- Prescription Management -->
-    <section class="prescriptions">
-        <h2>Manage Prescriptions</h2>
-        <form id="prescription-form">
-            <label for="prescription-patient-select">Select Patient:</label>
-            <select id="prescription-patient-select">
-                <!-- Patient names will populate here -->
-            </select>
-            <br><br>
-            <label for="medication-name">Medication Name:</label>
-            <input type="text" id="medication-name" required>
-            <br><br>
-            <label for="dosage">Dosage:</label>
-            <input type="text" id="dosage" required>
-            <br><br>
-            <label for="frequency">Frequency:</label>
-            <input type="text" id="frequency" required>
-            <br><br>
-            <button type="submit">Create Prescription</button>
-        </form>
-    </section>
+        <!-- Prescription Management Section -->
+        <section class="prescriptions">
+            <h2>Manage Prescriptions</h2>
+            <form id="prescription-form">
+                <label for="prescription-patient-select">Select Patient:</label>
+                <select id="prescription-patient-select">
+                    <!-- Patient names will populate here -->
+                </select>
+                <br><br>
+                <label for="medication-name">Medication Name:</label>
+                <input type="text" id="medication-name" required>
+                <br><br>
+                <label for="dosage">Dosage:</label>
+                <input type="text" id="dosage" required>
+                <br><br>
+                <label for="frequency">Frequency:</label>
+                <input type="text" id="frequency" required>
+                <br><br>
+                <button type="submit">Create Prescription</button>
+            </form>
+        </section>
 
-  </main>
+    </main>
 
-  <footer>
-    <p>&copy; 2025 SereneNexus</p>
-  </footer>
+    <footer>
+        <p>&copy; 2025 SereneNexus</p>
+    </footer>
 
-  <script src="../script.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const patients = [
-            { id: 1, name: "Patient A", medicalHistory: "Anxiety disorder, depression", consultations: [], objectives: [], prescriptions: [] },
-            { id: 2, name: "Patient B", medicalHistory: "Post-traumatic stress disorder", consultations: [], objectives: [], prescriptions: [] },
-            { id: 3, name: "Patient C", medicalHistory: "Bipolar disorder", consultations: [], objectives: [], prescriptions: [] },
-        ];
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const patients = [
+                { id: 1, name: "Patient A", medicalHistory: "Anxiety disorder, depression" },
+                { id: 2, name: "Patient B", medicalHistory: "Post-traumatic stress disorder" },
+                { id: 3, name: "Patient C", medicalHistory: "Bipolar disorder" },
+            ];
 
-        // Populate patient lists in forms
-        const patientSelect = document.getElementById("patient-select");
-        const chatSelect = document.getElementById("chat-select");
-        const patientObjectiveSelect = document.getElementById("patient-objective-select");
-        const prescriptionPatientSelect = document.getElementById("prescription-patient-select");
+            // Populate patient lists in forms
+            const patientSelect = document.getElementById("patient-select");
+            const chatSelect = document.getElementById("chat-select");
+            const patientObjectiveSelect = document.getElementById("patient-objective-select");
+            const prescriptionPatientSelect = document.getElementById("prescription-patient-select");
 
-        patients.forEach(patient => {
-            const option = document.createElement("option");
-            option.value = patient.id;
-            option.textContent = patient.name;
-            patientSelect.appendChild(option);
-            chatSelect.appendChild(option.cloneNode(true));
-            patientObjectiveSelect.appendChild(option.cloneNode(true));
-            prescriptionPatientSelect.appendChild(option.cloneNode(true));
+            patients.forEach(patient => {
+                const option = document.createElement("option");
+                option.value = patient.id;
+                option.textContent = patient.name;
+                patientSelect.appendChild(option);
+                chatSelect.appendChild(option.cloneNode(true));
+                patientObjectiveSelect.appendChild(option.cloneNode(true));
+                prescriptionPatientSelect.appendChild(option.cloneNode(true));
+            });
+
+            // Display patient list in table
+            const patientListContainer = document.querySelector("#patient-list tbody");
+            patients.forEach(patient => {
+                const row = document.createElement("tr");
+                row.innerHTML = `
+                    <td>${patient.name}</td>
+                    <td>${patient.medicalHistory}</td>
+                    <td>
+                        <button onclick="window.location.href='consultation.html?patientId=${patient.id}'">Consultation</button>
+                        <button onclick="window.location.href='chat.html?patientId=${patient.id}'">Chat</button>
+                        <button onclick="window.location.href='objectives.html?patientId=${patient.id}'">Objectives</button>
+                        <button onclick="window.location.href='prescriptions.html?patientId=${patient.id}'">Prescriptions</button>
+                    </td>
+                `;
+                patientListContainer.appendChild(row);
+            });
+
+            // Handle consultation scheduling
+            const consultationForm = document.getElementById("consultation-form");
+            consultationForm.addEventListener("submit", function(e) {
+                e.preventDefault();
+                const selectedPatientId = document.getElementById("patient-select").value;
+                const consultationDate = document.getElementById("consultation-date").value;
+                alert(`Consultation scheduled with ${patients[selectedPatientId - 1].name} for ${consultationDate}`);
+            });
+
+            // Handle private chat
+            const chatForm = document.getElementById("chat-form");
+            chatForm.addEventListener("submit", function(e) {
+                e.preventDefault();
+                const selectedPatientId = document.getElementById("chat-select").value;
+                const message = document.getElementById("chat-message").value;
+                alert(`Message sent to ${patients[selectedPatientId - 1].name}: ${message}`);
+            });
+
+            // Handle treatment objectives
+            const objectivesForm = document.getElementById("objectives-form");
+            objectivesForm.addEventListener("submit", function(e) {
+                e.preventDefault();
+                const selectedPatientId = document.getElementById("patient-objective-select").value;
+                const objective = document.getElementById("objective-input").value;
+                alert(`Objective set for ${patients[selectedPatientId - 1].name}: ${objective}`);
+            });
+
+            // Handle prescriptions
+            const prescriptionForm = document.getElementById("prescription-form");
+            prescriptionForm.addEventListener("submit", function(e) {
+                e.preventDefault();
+                const selectedPatientId = document.getElementById("prescription-patient-select").value;
+                const medicationName = document.getElementById("medication-name").value;
+                const dosage = document.getElementById("dosage").value;
+                const frequency = document.getElementById("frequency").value;
+                alert(`Prescription for ${patients[selectedPatientId - 1].name}: ${medicationName} - ${dosage}, ${frequency}`);
+            });
         });
-
-        // Display patient list
-        const patientListContainer = document.getElementById("patient-list");
-        patients.forEach(patient => {
-            const listItem = document.createElement("li");
-            listItem.textContent = `${patient.name} - ${patient.medicalHistory}`;
-            patientListContainer.appendChild(listItem);
-        });
-
-        // Handle scheduling consultations
-        const consultationForm = document.getElementById("consultation-form");
-        consultationForm.addEventListener("submit", function(e) {
-            e.preventDefault();
-            const selectedPatientId = document.getElementById("patient-select").value;
-            const consultationDate = document.getElementById("consultation-date").value;
-            alert(`Consultation scheduled with ${patients[selectedPatientId - 1].name} for ${consultationDate}`);
-        });
-
-        // Handle private chat
-        const chatForm = document.getElementById("chat-form");
-        chatForm.addEventListener("submit", function(e) {
-            e.preventDefault();
-            const selectedPatientId = document.getElementById("chat-select").value;
-            const message = document.getElementById("chat-message").value;
-            alert(`Message sent to ${patients[selectedPatientId - 1].name}: ${message}`);
-        });
-
-        // Handle treatment objectives
-        const objectivesForm = document.getElementById("objectives-form");
-        objectivesForm.addEventListener("submit", function(e) {
-            e.preventDefault();
-            const selectedPatientId = document.getElementById("patient-objective-select").value;
-            const objective = document.getElementById("objective-input").value;
-            alert(`Objective set for ${patients[selectedPatientId - 1].name}: ${objective}`);
-        });
-
-        // Handle prescriptions
-        const prescriptionForm = document.getElementById("prescription-form");
-        prescriptionForm.addEventListener("submit", function(e) {
-            e.preventDefault();
-            const selectedPatientId = document.getElementById("prescription-patient-select").value;
-            const medicationName = document.getElementById("medication-name").value;
-            const dosage = document.getElementById("dosage").value;
-            const frequency = document.getElementById("frequency").value;
-            alert(`Prescription for ${patients[selectedPatientId - 1].name}: ${medicationName} - ${dosage}, ${frequency}`);
-        });
-    });
-  </script>
+    </script>
 </body>
 </html>
