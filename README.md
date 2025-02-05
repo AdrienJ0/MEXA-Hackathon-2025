@@ -30,16 +30,21 @@ To see an inference example of AI-computer vision model, go to : "Computer VIsio
 
 # Visual aspect 
 
+## AI Key features
 ![AI Key Features](media/image.png)
 
+## Patient Dashboard
 ![Patient Dashboard - 1](media/image-1.png)
 ![Patient Dashboard - 2](media/image-2.png)
 
+## Community Hub
 ![Community Hub - 1](media/image-3.png)
 ![Community Hub - 2](media/image-4.png)
 
+# E-learning Section
 ![E-Learning](media/image-5.png)
 
+## Clinician Dashboard
 ![Clinician Dashboard - 1](media/image-6.png)
 ![Clinician Dashboard - 2](media/image-7.png)
 
