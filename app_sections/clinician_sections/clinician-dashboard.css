@@ -1,0 +1,199 @@
+/* clinician-dashboard.css */
+:root {
+    --primary-color: #588BAE;
+    --secondary-color: #E0E8EF;
+    --text-color: #333;
+    --accent-color: #A7C4BC;
+    --button-color: #457092;
+    --card-bg-color: white;
+    --input-border: #ccc;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color);
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+main {
+    flex-grow: 1;
+    padding: 2rem;
+}
+
+h1, h2 {
+    color: var(--primary-color);
+}
+
+section {
+    background-color: var(--card-bg-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+/* Patient List */
+.patient-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.patient-list li {
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Consultation Scheduling */
+.schedule-consultation form {
+    display: flex;
+    flex-direction: column;
+}
+
+.schedule-consultation label {
+    font-weight: 500;
+}
+
+.schedule-consultation input,
+.schedule-consultation select {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid var(--input-border);
+    border-radius: 5px;
+}
+
+.schedule-consultation button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.schedule-consultation button:hover {
+    background-color: var(--button-color);
+}
+
+/* Private Chat */
+.private-chat form {
+    display: flex;
+    flex-direction: column;
+}
+
+.private-chat textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--input-border);
+    border-radius: 5px;
+    resize: vertical;
+    margin-bottom: 1rem;
+}
+
+.private-chat button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.private-chat button:hover {
+    background-color: var(--button-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 1rem 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
