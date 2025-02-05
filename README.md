@@ -41,7 +41,7 @@ To see an inference example of AI-computer vision model, go to : "Computer VIsio
 ![Community Hub - 1](media/image-3.png)
 ![Community Hub - 2](media/image-4.png)
 
-# E-learning Section
+## E-learning Section
 ![E-Learning](media/image-5.png)
 
 ## Clinician Dashboard
